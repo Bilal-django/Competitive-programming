@@ -1,4 +1,4 @@
-# C--DSA-Series-From-Fundamentals-to-Advanced
+#From-Fundamentals-to-Advanced
 Welcome to my DSA series in C++! This repository is a structured journey from beginner to advanced topics in Data Structures and Algorithms, designed to help deepen my understanding of C++ and create a resource for others interested in mastering these fundamental concepts.
 My goal with this project is to build a strong understanding of DSA in C++ and showcase my skills in hopes of landing a role in a top software company. Contributions and feedback are welcome, so feel free to check out my code, share your thoughts, or collaborate on improving this repository.
                              
