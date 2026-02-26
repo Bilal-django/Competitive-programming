@@ -1,0 +1,76 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Stack
+{
+    // Stack is like a double roti packet in which first in last out
+    // for creat stack we need->
+private:
+    int *arr;
+    int size;
+    int top;
+    void resize()
+    {
+        int newsize = size * 2;
+        int *newarr = new int[newsize]; //dynamic memory allocate in run time
+        for (int i = 0; i < size; i++)
+        {
+            newarr[i] = arr[i];
+        }
+        delete[] arr;
+        arr = newarr;
+        size = newsize;
+    }
+
+public:
+    Stack(int s)
+    {
+        size = s;
+        top = -1;
+        arr = new int[s];
+    }
+    // push , pop, peek, size
+    void push(int val)
+    {
+        if (top == size - 1)
+        {
+            cout << "stack over flow" << endl;
+            return;
+        }
+        else
+        {
+            arr[++top] = val;
+        }
+    }
+    void pop()
+    {
+        if (top == -1)
+        {
+            cout << "stack under flow" << endl;
+        }
+        else
+        {
+            arr[--top];
+        }
+    }
+    int peek()
+    {
+        if (top == -1)
+        {
+            cout << "stack Empty" << endl;
+        }
+        else
+        {
+            return arr[top];
+        }
+    }
+    int isSize()
+    {
+        return top + 1;
+    }
+};
+int main()
+{
+    Stack obj(6);
+    
+    return 0;
+}
