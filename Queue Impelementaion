@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+class queue
+{
+private:
+  int *arr;
+  int front;
+  int rear; // last person in line
+  int size;
+
+public:
+  queue(int n)
+  {
+    front = -1;
+    rear = -1;
+    arr = new int[n];
+    size = n;
+  }
+  bool Isempty()
+  {
+    return front == -1;
+  }
+  bool Isfull()
+  {
+    return rear == size - 1;
+  }
+  void Enqueue(int x)
+  {
+    if (Isempty())
+    {
+      front = rear = 0;
+      arr[0] = x;
+      cout << arr[0];
+    }
+    else if (Isfull())
+    {
+      cout << "\n queue is overflow" << endl;
+    }
+    else
+    {
+      rear++;
+      arr[rear] = x;
+      cout << " " << arr[rear];
+    }
+  }
+  void Dequeue()
+  {
+    if (Isempty())
+    {
+      cout << "empty queue" << endl;
+    }
+    else
+    {
+      if (front == rear)
+      {
+        cout << "remove " << arr[front] << endl;
+        front = rear = -1;
+      }
+      else
+      {
+        cout << "remove " << arr[front] << endl;
+        front += 1;
+      }
+    }
+  }
+};
+int main()
+{
+  queue obj(5);
+  obj.Enqueue(2);
+  obj.Enqueue(3);
+  obj.Enqueue(4);
+  obj.Enqueue(5);
+  obj.Enqueue(6);
+  obj.Enqueue(7);
+
+  return 0;
+}
